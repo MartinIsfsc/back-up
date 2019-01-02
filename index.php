@@ -1,14 +1,24 @@
 <!DOCTYPE html>
-<html lang="fr" dir="ltr">
+<html lang="en">
   
   <head>
     <meta charset="utf-8">
     <title>The Layers Project</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="icon" type="image/png" href="/image/xi.png"> 
-    <link rel="stylesheet" href="<?php bloginfo('template_directory') ?>/css/master.css">
+    <link rel="icon" type="image/png" href="<?php bloginfo('template_directory') ?>/image/xi.png">
+    
+    <!-- BOOTSTRAP -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+     
+    <!-- MON CSS -->
+    <link rel="stylesheet" href="<?php bloginfo('template_directory') ?>/custom-css/master.css">
+    <link rel="stylesheet" href="<?php bloginfo('template_directory') ?>/custom-css/custom-bootstrap.css">
+    
+    <!-- FONTS ET ICONS -->
     <link href="https://fonts.googleapis.com/css?family=Exo:400,600,700" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+
+    <?php wp_head(); ?>
   </head>
   
   <body>

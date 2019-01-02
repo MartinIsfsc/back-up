@@ -11,8 +11,8 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
      
     <!-- MON CSS -->
-    <link rel="stylesheet" href="<?php bloginfo('template_directory') ?>/css/master.css">
-    <link rel="stylesheet" href="<?php bloginfo('template_directory') ?>/custom.css">
+    <link rel="stylesheet" href="<?php bloginfo('template_directory') ?>/custom-css/master.css">
+    <link rel="stylesheet" href="<?php bloginfo('template_directory') ?>/custom-css/custom-bootstrap.css">
     
     <!-- FONTS ET ICONS -->
     <link href="https://fonts.googleapis.com/css?family=Exo:400,600,700" rel="stylesheet">
@@ -172,8 +172,8 @@
           <br>
           Rejoignez-nous sur les réseaux : <br>
           <a href="https://www.facebook.com/The-Layers-Project-438733686661474/?modal=admin_todo_tour"><i class="fab fa-facebook-square fa-2x"></i></a>
-          <a href="https://twitter.com"><i class="fab fa-instagram fa-2x"></i></a>  
-          <a href="https://instagram.com"><i class="fab fa-twitter-square fa-2x"></i></a>
+          <a href="https://instagram.com"><i class="fab fa-instagram fa-2x"></i></a>  
+          <a href="https://twitter.com"><i class="fab fa-twitter-square fa-2x"></i></a>
         </p>
 
       </div>

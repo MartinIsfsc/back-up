@@ -11,8 +11,8 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
      
     <!-- MON CSS -->
-    <link rel="stylesheet" href="<?php bloginfo('template_directory') ?>/css/master.css">
-    <link rel="stylesheet" href="<?php bloginfo('template_directory') ?>/custom.css">
+    <link rel="stylesheet" href="<?php bloginfo('template_directory') ?>/custom-css/master.css">
+    <link rel="stylesheet" href="<?php bloginfo('template_directory') ?>/custom-css/custom-bootstrap.css">
     
     <!-- FONTS ET ICONS -->
     <link href="https://fonts.googleapis.com/css?family=Exo:400,600,700" rel="stylesheet">
@@ -39,8 +39,8 @@
     </header>
   -->
 
-       <nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top ">
-              <a href="index.html" class="navbar-brand"><img src="image/tlp_blanc.png" alt="THE LAYERS PROJECT" class="d-inline-block align-top menu-logo-link"> </a>
+       <!-- <nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top ">
+              <a href="index.html" class="navbar-brand"><img src="<?php bloginfo('template_directory') ?>/image/tlp_blanc.png" alt="THE LAYERS PROJECT" class="d-inline-block align-top menu-logo-link"> </a>
 
                      <ul class="navbar-nav flex-space-between">
                             <li class="nav-item">
@@ -67,5 +67,33 @@
                                    <a href="#" class="nav-link menu_link">galerie</a>
                             </li>
                      </ul>
-       </nav>
+       </nav> -->
 
+
+       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+          <div class="container">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <?php
+            // On génère le "menu" ayant "primary" comme "location" (emplacement en fr).
+            // Docs : https://developer.wordpress.org/reference/functions/wp_nav_menu/
+
+            // Pour rappel : les emplacements des menus sont définis dans le
+            // fichier functions.php et assignés au(x) menu(s) dans le backoffice
+            // de WP (Apparence/Menu).
+            wp_nav_menu(array(
+              'theme_location' => 'top',
+
+              // Le(s) param(s) ci-dessous demande à WP d'ajouter certaines
+              // classes/id aux balises générées afin de correspondre au mieux à
+              // votre squelette HTML/CSS.
+              'container_class' => 'collapse navbar-collapse',
+              'container_id' => 'navbarNav',
+              'menu_class' => 'navbar-nav',
+            )); 
+            ?>  
+
+          </div>
+      </nav>
