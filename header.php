@@ -25,19 +25,6 @@
 
     
     <!-- LE MENU -->
-    
-    <!-- <header>
-
-      <a href="index.php" id="menu_logo"><img src="<?php bloginfo('template_directory') ?>/image/tlp_blanc.png" alt="THE LAYERS PROJECT" id="menu_logo_link"></a>
-      <span id="menu_accueil"> <a href="index.php" class="menu_link">accueil</a> </span>
-      <span id="menu_projet"> <a href="projet.php" class="menu_link"> projet </a></span>
-      <span id="menu_asbl"> <a href="asbl.php" class="menu_link"> asbl</a></span>
-      <span id="menu_agenda"> <a href="agenda.php" class="menu_link"> agenda</a> </span>
-      <span id="menu_news"><a href="news.php" class="menu_link">news</a> </span>
-      <span id="menu_galerie"><a href="galerie.php" class="menu_link">galerie</a> </span>
-
-    </header>
-  -->
 
     <header> 
        <nav class="menu-container navbar navbar-dark navbar-expand-lg fixed-top" >
