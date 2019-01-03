@@ -1,19 +1,55 @@
-.bg-dark{
+header{
+       display: block;
+       width: 100%;
+}
+
+.container{
+       display: flex;
+       flex-wrap: wrap;
+       margin: 0 5vw;
+       width: 100%;
+}
+
+@media (min-width: 768px){
+       header{
+              display: block;
+              width: 100%;
+       }
+
+       .menu-container{
+              padding-left: 5vw;
+              padding-right: 5vw;
+       }
+}
+
+.menu-container{
+       margin: 0 ;
        background-color: black;
+}
+
+.navbar-brand{
+       width: auto;
+       margin-right: 0;
+}
+
+.menu-logo-link{
+       display : block;
+       width : 100%;
 }
 
 @media (min-width: 768px){
        .menu-logo-link{
-              width: 30vw;
+              margin-left: 0;
        }
-} 
 
-.container{
-       margin: 0 1vw;
+       #navbarNav{
+              padding-left : 0; 
+       }
 }
-.menu-container{
-       margin: 0;
-       background-color: black;
+
+.navbar-nav {
+       display: flex;
+       justify-content: end;
 }
 
 .menu-container .menu-item a{
@@ -34,3 +70,4 @@
        background-color: #444444;
        padding: .5rem 1rem;    
 }
+

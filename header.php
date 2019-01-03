@@ -39,11 +39,13 @@
     </header>
   -->
 
-
-       <nav class="menu-container navbar navbar-expand-lg fixed-top" >
+    <header> 
+       <nav class="menu-container navbar navbar-dark navbar-expand-lg fixed-top" >
           <div class="container">
 
-              <a href="index.html" class="navbar-brand"><img src="<?php bloginfo('template_directory') ?>/image/tlp_blanc.png" alt="THE LAYERS PROJECT" class="d-inline-block align-top menu-logo-link"> </a>  
+              <a href="<?php echo get_home_url(); ?>" class="navbar-brand">
+                <img src="<?php bloginfo('template_directory') ?>/image/tlp_blanc.png" alt="THE LAYERS PROJECT" class="d-inline-block align-top menu-logo-link"> 
+              </a>  
 
               <?php
               // Docs : https://developer.wordpress.org/reference/functions/wp_nav_menu/
@@ -59,13 +61,15 @@
                      // votre squelette HTML/CSS.
                      'container_class' => 'collapse navbar-collapse',
                      'container_id' => 'navbarNav',
-                     'menu_class' => 'navbar-nav navbar-right',
+                     'menu_class' => 'navbar-nav',
               )); 
               ?> 
             
-              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <button class="navbar-toggler float-xs-left" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
               </button>
 
           </div>
       </nav>
+
+  </header> 
