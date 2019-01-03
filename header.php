@@ -39,61 +39,33 @@
     </header>
   -->
 
-       <!-- <nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top ">
-              <a href="index.html" class="navbar-brand"><img src="<?php bloginfo('template_directory') ?>/image/tlp_blanc.png" alt="THE LAYERS PROJECT" class="d-inline-block align-top menu-logo-link"> </a>
 
-                     <ul class="navbar-nav flex-space-between">
-                            <li class="nav-item">
-                                   <a href="#" class="nav-link menu_link"> accueil</a>
-                            </li>
-
-                            <li class="nav-item">
-                                   <a href="#" class="nav-link menu_link">projet</a>
-                            </li>
-
-                            <li class="nav-item">
-                                   <a href="#" class="nav-link menu_link">asbl</a>
-                            </li>
-                            
-                            <li class="nav-item">
-                                   <a href="#" class="nav-link menu_link">agenda</a>
-                            </li>
-                            
-                            <li class="nav-item">
-                                   <a href="#" class="nav-link menu_link">news</a>
-                            </li>
-                            
-                            <li class="nav-item">
-                                   <a href="#" class="nav-link menu_link">galerie</a>
-                            </li>
-                     </ul>
-       </nav> -->
-
-
-       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+       <nav class="menu-container navbar navbar-expand-lg fixed-top" >
           <div class="container">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
+
+              <a href="index.html" class="navbar-brand"><img src="<?php bloginfo('template_directory') ?>/image/tlp_blanc.png" alt="THE LAYERS PROJECT" class="d-inline-block align-top menu-logo-link"> </a>  
+
+              <?php
+              // Docs : https://developer.wordpress.org/reference/functions/wp_nav_menu/
+
+              // Pour rappel : les emplacements des menus sont définis dans le
+              // fichier functions.php et assignés au(x) menu(s) dans le backoffice
+              // de WP (Apparence/Menu).
+              wp_nav_menu(array(
+                     'theme_location' => 'top',
+
+                     // Le(s) param(s) ci-dessous demande à WP d'ajouter certaines
+                     // classes/id aux balises générées afin de correspondre au mieux à
+                     // votre squelette HTML/CSS.
+                     'container_class' => 'collapse navbar-collapse',
+                     'container_id' => 'navbarNav',
+                     'menu_class' => 'navbar-nav navbar-right',
+              )); 
+              ?> 
             
-            <?php
-            // On génère le "menu" ayant "primary" comme "location" (emplacement en fr).
-            // Docs : https://developer.wordpress.org/reference/functions/wp_nav_menu/
-
-            // Pour rappel : les emplacements des menus sont définis dans le
-            // fichier functions.php et assignés au(x) menu(s) dans le backoffice
-            // de WP (Apparence/Menu).
-            wp_nav_menu(array(
-              'theme_location' => 'top',
-
-              // Le(s) param(s) ci-dessous demande à WP d'ajouter certaines
-              // classes/id aux balises générées afin de correspondre au mieux à
-              // votre squelette HTML/CSS.
-              'container_class' => 'collapse navbar-collapse',
-              'container_id' => 'navbarNav',
-              'menu_class' => 'navbar-nav',
-            )); 
-            ?>  
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+              </button>
 
           </div>
       </nav>

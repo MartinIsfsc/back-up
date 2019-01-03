@@ -1,9 +1,36 @@
 .bg-dark{
-       color: black;
+       background-color: black;
 }
 
-.menu-logo-link{
-       width: 40vw;
-       padding-left: 10px;
+@media (min-width: 768px){
+       .menu-logo-link{
+              width: 30vw;
+       }
+} 
+
+.container{
+       margin: 0 1vw;
+}
+.menu-container{
+       margin: 0;
+       background-color: black;
 }
 
+.menu-container .menu-item a{
+       display: block;
+       padding: .5rem 1rem;
+       text-transform: uppercase;
+       font-size: 1.2rem;
+}
+
+.menu-container .menu-item a:link, .menu-container .menu-item a:visited{
+       color : #ffffff ;
+       text-decoration: none;
+       border-radius: 15px;
+       font-weight: 800;
+}
+   
+.menu-container .menu-item a:hover, .menu-container .menu-item a:active{
+       background-color: #444444;
+       padding: .5rem 1rem;    
+}
