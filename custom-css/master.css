@@ -122,29 +122,31 @@ p{
 
 /* SLOGAN */
 
-#slogan{
+.slogan {
     background-image: url("../image/landscape.png");
     background-size: 150%;
     background-position: center top;
     background-repeat: no-repeat;
     display : grid;
     height: auto;
-    grid-template-columns: 1vw repeat(12, 1fr) 1vw;
     grid-template-rows: auto;
     grid-column-gap: 30px ;
 }
 
-#slogan_titre{
-    font-size: 3.2vw;
-    grid-column: 6 / 10;
-    grid-row: 1;
+.slogan .col{
+    justify-self: center;
+    align-self: center;
+    padding : 40vh 0 ;
+    /* margin-top : 10%;  */
+}
+
+.slogan_titre{
+    font-size: 3rem;
     justify-self: center;
     align-self: center;
     color : white ;
     font-weight: 600;
     text-shadow: 5px 2px black;
-    padding : 50% 0 ;
-    margin-top : 10% 
 }
 
 

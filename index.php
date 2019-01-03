@@ -137,7 +137,7 @@
             1020 Bruxelles <br>
             <br>
             TEL : <a href="callto:+3227343434" class="footer_link">+322 734 34 34</a>  <br>
-            MAIL : <a href="mailto:layers.project@gmail.com" class="footer_link"> layers.project@gmail.com </a><br>
+            MAIL : <a href="mailto:layersproject.belgium@gmail.com" class="footer_link"> layers.project@gmail.com </a><br>
       </div>
     
 

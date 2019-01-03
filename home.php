@@ -3,16 +3,30 @@
     
     <!-- LE SLOGAN -->
     
-    <section id="slogan">
-      
-      <p id="slogan_titre">Lâche ta caisse !</p>
+    <section class="slogan container-fluid text-center">
+
+      <div class="col-sm row">
+	    <?php
+	    $params = array('pagename' => 'slogan');
+	    $the_query = new WP_Query($params);
+
+	    if ( $the_query->have_posts() ) :
+		    while ( $the_query->have_posts() ) :
+			    $the_query->the_post(); ?>
+
+          <span class="slogan_titre col"><?php the_content() ?></span>
+
+		    <?php
+		    endwhile;
+	    endif; ?>
+    </div>
 
     </section>
 
     
     <!-- L'intro -->
     
-    <section id="intro_container">
+    <section id="intro_container row text-center">
       
       <a href="projet.php" id="intro_link">introduction au projet</a>
       
@@ -27,7 +41,7 @@
     
     <!-- L'agenda -->
     
-    <section id="agenda_container">
+    <section id="agenda_container row">
         
       <a href="agenda.php" id="agenda_link"> agenda</a>
       
@@ -63,7 +77,7 @@
     
     <!-- Les News -->
     
-    <section id="news_container">
+    <section id="news_container row">
 
       <a href="news.php" id="news_link">news</a>
 
@@ -99,7 +113,7 @@
             1020 Bruxelles <br>
             <br>
             TEL : <a href="callto:+3227343434" class="footer_link">+322 734 34 34</a>  <br>
-            MAIL : <a href="mailto:layers.project@gmail.com" class="footer_link"> layers.project@gmail.com </a><br>
+            MAIL : <a href="mailto:layersproject.belgium@gmail.com" class="footer_link"> layers.project@gmail.com </a><br>
       </div>
     
 
