@@ -26,7 +26,7 @@
     
     <!-- L'intro -->
     
-    <section id="intro_container row text-center">
+    <section id="intro_container d-flex row text-center">
       
       <a href="projet.php" id="intro_link">introduction au projet</a>
       
@@ -41,7 +41,7 @@
     
     <!-- L'agenda -->
     
-    <section id="agenda_container row">
+    <section id="agenda_container d-flex row">
         
       <a href="agenda.php" id="agenda_link"> agenda</a>
       
@@ -77,7 +77,7 @@
     
     <!-- Les News -->
     
-    <section id="news_container row">
+    <section id="news_container d-flex row">
 
       <a href="news.php" id="news_link">news</a>
 
@@ -102,7 +102,7 @@
     
     <!-- Le Footer -->
 
-    <footer>
+    <footer class="d-flex">
       
       <span id="footer_coordonnees_titre">coordonnées</span>
                  

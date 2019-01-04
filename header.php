@@ -28,11 +28,17 @@
 
     <header> 
        <nav class="menu-container navbar navbar-dark navbar-expand-lg fixed-top" >
-          <div class="container">
+          <div class="container d-flex justify-content-between">
 
-              <a href="<?php echo get_home_url(); ?>" class="navbar-brand">
-                <img src="<?php bloginfo('template_directory') ?>/image/tlp_blanc.png" alt="THE LAYERS PROJECT" class="d-inline-block align-top menu-logo-link"> 
+              <a href="<?php echo get_home_url(); ?>" class="navbar-brand d-flex align-items-center">
+                <p class="d-md-none uppercase" >the layers project</p>
+                <img src="<?php bloginfo('template_directory') ?>/image/tlp_blanc.png" alt="THE LAYERS PROJECT" class="d-none d-md-block align-center menu-logo-link">
+                 
               </a>  
+
+              <button class="navbar-toggler float-left" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+              </button>
 
               <?php
               // Docs : https://developer.wordpress.org/reference/functions/wp_nav_menu/
@@ -51,10 +57,6 @@
                      'menu_class' => 'navbar-nav',
               )); 
               ?> 
-            
-              <button class="navbar-toggler float-xs-left" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-              </button>
 
           </div>
       </nav>

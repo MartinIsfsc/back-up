@@ -1,18 +1,11 @@
+/* HEADER */
+
 header{
-       display: block;
-       width: 100%;
+       max-width: auto;
 }
 
-@media (min-width: 768px){
-       header{
-              display: block;
-              width: 100%;
-       }
-
-       .menu-container{
-              padding-left: 5vw;
-              padding-right: 5vw;
-       }
+.uppercase{
+       text-transform: uppercase;
 }
 
 .menu-container{
@@ -21,12 +14,10 @@ header{
 }
 
 .navbar-brand{
-       width: auto;
-       margin-right: 0;
+       width: 100%;
 }
 
 .menu-logo-link{
-       display : block;
        width : 100%;
 }
 
@@ -42,11 +33,9 @@ header{
 
 .navbar-nav {
        display: flex;
-       justify-content: end;
 }
 
 .menu-container .menu-item a{
-       display: block;
        padding: .5rem 1rem;
        text-transform: uppercase;
        font-size: 1.2rem;
