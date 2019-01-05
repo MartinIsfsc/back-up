@@ -3,7 +3,7 @@
     
     <!-- LE SLOGAN -->
     
-    <section class="slogan container-fluid text-center">
+    <section class="slogan jumbotron text-center">
 
       <div class="col-sm row">
 	    <?php
@@ -26,27 +26,34 @@
     
     <!-- L'intro -->
     
-    <section id="intro_container d-flex row text-center">
-      
-      <a href="projet.php" id="intro_link">introduction au projet</a>
-      
-      <p id="intro_texte">
-        À l'heure où l'on voit des files interminables de voitures bloquées sur la route, à l'heure où l'on fait tout pour trouver des alternatives viables pour pouvoir circuler en ville, où l'on aimerait circuler plus rapidement et efficacement que jamais, on reste malgré tout coincé par les mêmes problèmes depuis des années déjà. C'est pourquoi, nous avons décidé de reprendre un projet de réaménagement de ville qui serait véritablement optimisé pour la circulation. Ce projet imaginé d'abord par Walt Disney, renaît aujourd'hui sous le nom de Layers Project.
-      </p>
-      
-      <q>Une ville sur tous les plans</q>
-    
+    <section class="jumbotron d-flex text-center">
+
+      <div class="container">
+	      <?php
+	      $params = array('pagename' => 'introduction-au-projet');
+	      $the_query = new WP_Query($params);
+
+	      if ( $the_query->have_posts() ) :
+		      while ( $the_query->have_posts() ) :
+			      $the_query->the_post(); ?>
+
+            <a href="<?php the_permalink() ?>" class="intro_link uppercase text-center"><?php the_title() ?></a>
+            <div class="intro_texte text-center"><?php the_content() ?></div>
+		      <?php
+		      endwhile;
+	      endif; ?>
+      </div>
+
     </section>
 
     
     <!-- L'agenda -->
     
-    <section id="agenda_container d-flex row">
+    <section id="agenda_container d-flex">
         
-      <a href="agenda.php" id="agenda_link"> agenda</a>
+      <!-- <a href="agenda.php" id="agenda_link"> agenda</a>
       
       
-      <!-- évent 1 -->
       <a href="event_laurent_alexandre" id="agenda_event_block1_link">
         <div id="agenda_event_block1">  
           <img src="image/laurent_alexandre.jpeg" id="agenda_event_image1" alt="laurent alexandre">
@@ -69,7 +76,7 @@
 
         <p class="agenda_event_date" id="agenda_event_date3">22 / 09 journée sans voitures</p>
 
-      </div>
+      </div> -->
 
 
     </section>
@@ -77,9 +84,9 @@
     
     <!-- Les News -->
     
-    <section id="news_container d-flex row">
+    <section id="news_container d-flex">
 
-      <a href="news.php" id="news_link">news</a>
+      <!-- <a href="news.php" id="news_link">news</a>
 
       <p class="news_article_titre" id="news_article_titre1">la technologie en plein coeur de la ville</p>
 
@@ -97,14 +104,14 @@
     
       <img src="image/laurent_alexandre.jpeg" id="news_article4" alt="laurent alexandre">
 
-    </section>
+    </section> -->
 
     
     <!-- Le Footer -->
 
     <footer class="d-flex">
       
-      <span id="footer_coordonnees_titre">coordonnées</span>
+      <!-- <span id="footer_coordonnees_titre">coordonnées</span>
                  
       
       <div id="footer_coordonnees_content">
@@ -167,7 +174,7 @@
         </span>
         
       </span>  
-    
+     -->
     </footer>
 
     

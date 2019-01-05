@@ -119,37 +119,9 @@ p{
 }
 
 
-/* SLOGAN */
-
-.slogan {
-    background-image: url("../image/landscape.png");
-    background-size: auto;
-    background-position: center center ;
-    background-repeat: no-repeat;
-    height: 600px;
-}
-
-.slogan .col{
-    justify-self: center;
-    align-self: center;
-    padding-top : 15rem ;
-    padding-bottom: 10rem;
-}
-
-.slogan_titre{
-    font-size: 3rem;
-    justify-self: center;
-    align-self: center;
-    color : white ;
-    font-weight: 600;
-    text-shadow: 5px 2px black;
-}
-
-
 /* INTRO */
 
 #intro_container{
-    display: grid;
     height: auto;
     grid-template-columns: 1vw repeat(12, 1fr) 1vw;
     grid-template-rows: auto ;
@@ -159,17 +131,14 @@ p{
     padding: 1% 0;
 }
 
-#intro_link{
+.intro_link{
     justify-self: center;
     color: #ffffff;
-    text-transform: uppercase;
 }
 
-#intro_link{
+.intro_link{
     font-size : 1.5rem;
     font-weight: 600;
-    grid-row: 1;
-    grid-column: 6/10;
     justify-self: center;
     align-self: center;
     border-color: #ffffff;
@@ -177,21 +146,19 @@ p{
     padding: 4px 10px;
 }
 
-#intro_link:link, #intro_link:visited{
+.intro_link:link, .intro_link:visited{
     color : #66ed5d;
     text-decoration: none;
 }
 
-#intro_link:hover, #intro_link:active{
+.intro_link:hover, .intro_link:active{
     background-color: #000000;    
     padding: 4px 10px;  
 }
 
-#intro_texte{
+.intro_texte{
     font-size : 1rem;
     color: #ffffff;
-    grid-column: 4 / 12;
-    grid-row : 2;
     justify-self: center;
     text-align : justify;
 }
