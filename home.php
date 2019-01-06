@@ -51,7 +51,7 @@
     
     <section class="py-5 bg-light">
         
-      <div class="row pb-3">
+      <div class="functionnal-row pb-3">
         <div class="px-3 py-3 pt-md-4 pb-md-4 mx-auto text-center">
           <a href="agenda.php" class="title_link uppercase lightened"> agenda</a>
         </div>
@@ -106,13 +106,13 @@
     
     <section class="py-5">
       
-      <div class="row pb-3">
+      <div class="functionnal-row pb-3">
         <div class="px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
           <a href="news.php" class="title_link uppercase">news</a>
         </div>
       </div>
       
-      <div class="wide-container wide-container mx-sm-2 mx-md-5">
+      <div class="wide-container mx-sm-2 mx-md-5">
         <div class="row">
 
 	        <?php
@@ -124,12 +124,12 @@
 			        $the_query->the_post(); ?>
 
           <div class="col-md-3 card-group">
-            <div class="card mb-3 shadow-sm">
+            <div class="card mb-3">
 
 	            <?php
 	            if(get_the_post_thumbnail_url()): ?>
                 <a href="<?php the_permalink(); ?>">
-                  <img class="card-img-top" src="<?php the_post_thumbnail_url() ?>" alt="Card image cap">
+                  <img class="card-img-top" src="<?php the_post_thumbnail_url() ?>" alt="Card image ">
                 </a>
 	            <?php endif; ?>
 
@@ -186,41 +186,98 @@
 
     <footer class="d-flex">
       
-      <!-- <span id="footer_coordonnees_titre">coordonnées</span>
-                 
+    <div class="container">
+          <div class="row">
+
+            <div class="col-sm-4 py-4">
+              <?php
+                // On récupère la "page" ayant "a-propos-de-nous" comme slug.
+                // Docs: https://developer.wordpress.org/reference/classes/wp_query/
+	              $params = array('pagename' => 'coordonnees');
+	              $the_query = new WP_Query($params);
+
+	              if ( $the_query->have_posts() ) :
+		              while ( $the_query->have_posts() ) :
+			              $the_query->the_post(); ?>
+
+                <h4>
+                  <p href="<?php the_title() ?>" class="text-white uppercase"><?php the_title() ?></p>
+                </h4>
+                <div class="text-white">
+                    <?php the_excerpt() ?>
+                </div>
+
+                  <?php
+                  endwhile;
+                endif; 
+              
+              
+	            wp_nav_menu(array(
+                'theme_location' => 'bottom-contact',
+                
+		            'menu_class' => 'list-unstyled text-white',
+	            ));
+	            ?>
+            </div>
+            
+            <div class="col-sm-3 py-4">
+              <h4 class="text-white uppercase">map du site</h4>
+	            <?php
+	            wp_nav_menu(array(
+                'theme_location' => 'bottom-map',
+                
+		            'menu_class' => 'list-unstyled text-white',
+	            ));
+	            ?>
+            </div>   
+            
+            <div class="col-sm-4 col-md-5 py-4">
+	            <?php
+              // On récupère la "page" ayant "a-propos-de-nous" comme slug.
+              // Docs: https://developer.wordpress.org/reference/classes/wp_query/
+	            $params = array('pagename' => 'a-propos');
+	            $the_query = new WP_Query($params);
+
+	            if ( $the_query->have_posts() ) :
+		            while ( $the_query->have_posts() ) :
+			            $the_query->the_post(); ?>
+
+              <h4>
+                <p href="<?php the_permalink() ?>" class="text-white uppercase"><?php the_title() ?></p>
+              </h4>
+              <div class="text-white">
+                  <?php the_excerpt() ?>
+                  <br>
+                  <a href="https://www.facebook.com/The-Layers-Project-438733686661474/?modal=admin_todo_tour"><i class="fab fa-facebook-square fa-2x"></i></a>
+                  <a href="https://instagram.com"><i class="fab fa-instagram fa-2x"></i></a>
+                  <a href="https://twitter.com"><i class="fab fa-twitter-square fa-2x"></i></a>
+                </p>
+              </div>
+
+                <?php
+                endwhile;
+	            endif; ?>
+            </div>
+
+            <span class="row">
+            <div class="col-sm-2 py-4">
+              <h4 class="text-white">coordonnées</h4>
+	            <?php
+	            wp_nav_menu(array(
+                'theme_location' => 'sub-bottom',
+                
+		            'menu_class' => 'list-unstyled text-white',
+	            ));
+	            ?>
+            </div>
+            </span>
+            
+          </div>
+        </div>
       
-      <div id="footer_coordonnees_content">
-            ASBL THE LAYERS PROJECT <br>
-            Rue des charbonniers 12 <br>
-            1020 Bruxelles <br>
-            <br>
-            TEL : <a href="callto:+3227343434" class="footer_link">+322 734 34 34</a>  <br>
-            MAIL : <a href="mailto:layersproject.belgium@gmail.com" class="footer_link"> layers.project@gmail.com </a><br>
-      </div>
-    
-
-
-      <span id="footer_map_titre"> map du site</span>
-  
-      <div id="footer_map_content">
-        
-        <p>
-            <a href="index.php" class="footer_link"> Accueil</a> <br>
-            
-            <a href="projet.php" class="footer_link">Projet</a> <br>
-            
-            <a href="asbl.php" class="footer_link">ASBL</a> <br>
-            <br>
-            <a href="agenda.php" class="footer_link">Agenda</a> <br>
-            
-            <a href="news.php" class="footer_link">News</a> <br>
-            
-        </p>
-
-      </div>
 
       
-      <span id="footer_asbl_titre">l'asbl</span>
+      <!-- <span id="footer_asbl_titre">l'asbl</span>
 
       <div id="footer_asbl_content">
         
@@ -248,8 +305,8 @@
       
         </span>
         
-      </span>  
-     -->
+      </span>   -->
+    
     </footer>
 
     

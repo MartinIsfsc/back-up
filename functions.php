@@ -5,7 +5,7 @@ function theme_options() {
 	add_theme_support('post-thumbnails');
 
 	// Définis les emplacements (locations) pour les menus
-	register_nav_menus(array('top' => 'Header', 'bottom' => 'Footer'));
+	register_nav_menus(array('top' => 'Header', 'bottom-map' => 'Mapping du site', 'sub-bottom' => 'Sub-Footer', 'bottom-contact' => 'Contact'));
 
 };
 

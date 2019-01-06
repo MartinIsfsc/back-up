@@ -18,6 +18,10 @@ body{
        max-width: 2560px;
 }
 
+.functionnal-row{
+       margin: 0 auto;
+}
+
 .uppercase{
        text-transform: uppercase;
 }
@@ -174,7 +178,7 @@ div a .navbar-title{
 
 
 
-/* AGENDA */
+/* AGENDA  et NEWS*/
 .agenda_event_date{
        font-size: 1.5rem ;
        margin-left: 0 ;
@@ -198,9 +202,17 @@ div a .navbar-title{
 
 .card{
        transition: 0.5s;
-       box-shadow: 0 8px 16px 0 rgba(0,0,0,0); 
+       box-shadow: 16px 8px 16px 10px rgba(0,0,0,0); 
 }
 
 .card:hover{
-       box-shadow: 0 8px 16px 0 rgba(0,0,0,0.5);
+       box-shadow: 10px 8px 16px 0 rgba(0,0,0,0.5);
 }
+
+.card a img :hover{
+       box-shadow: 15px 10px 10px 10px rgba(0,0,0,0.5) inset ;
+}
+
+
+
+/* FOOTER */
