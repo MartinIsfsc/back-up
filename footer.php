@@ -1,75 +1,110 @@
-<footer>
+
+    
+    <!-- Le Footer -->
+
+    <footer class="footer_text">
       
-      <span id="footer_coordonnees_titre">coordonnées</span>
+      <div class="functionnal-row">
+          <div class="container">
+            <div class="row d-flex">
+            <div class="col-md-4 py-4">
+              <?php
+                // On récupère la "page" ayant "a-propos-de-nous" comme slug.
+                // Docs: https://developer.wordpress.org/reference/classes/wp_query/
+	              $params = array('pagename' => 'coordonnees');
+	              $the_query = new WP_Query($params);
+
+	              if ( $the_query->have_posts() ) :
+		              while ( $the_query->have_posts() ) :
+			              $the_query->the_post(); ?>
+
+                <h4>
+                  <p href="<?php the_title() ?>" class="uppercase"><?php the_title() ?></p>
+                </h4>
+                <div class="">
+                    <?php the_content() ?>
+                </div>
+
+                  <?php
+                  endwhile;
+                endif; 
+              
+              
+	            wp_nav_menu(array(
+                'theme_location' => 'bottom-contact',
+                
+		            'menu_class' => 'list-unstyled mt-4',
+	            ));
+	            ?>
+            </div>
+            
+            <div class="col-md-2 py-4">
+              <h4 class="uppercase">map du site</h4>
+	            <?php
+	            wp_nav_menu(array(
+                'theme_location' => 'bottom-map',
+                
+		            'menu_class' => 'list-unstyled ',
+	            ));
+	            ?>
+            </div>   
+            
+            <div class="col-md-6 py-4">
+	            <?php
+	            $params = array('pagename' => 'a-propos');
+	            $the_query = new WP_Query($params);
+
+	            if ( $the_query->have_posts() ) :
+		            while ( $the_query->have_posts() ) :
+			            $the_query->the_post(); ?>
+
+              <h4>
+                <p href="<?php the_permalink() ?>" class=" uppercase"><?php the_title() ?></p>
+              </h4>
+              <div>
+                  <?php the_content() ?>
+                  <a href="https://www.facebook.com/The-Layers-Project-438733686661474/?modal=admin_todo_tour"><i class="fab fa-facebook-square fa-2x"></i></a>
+                  <a href="https://www.instagram.com/layersproject.belgium/?hl=fr"><i class="fab fa-instagram fa-2x"></i></a>
+                  <a href="https://twitter.com/layers_project"><i class="fab fa-twitter-square fa-2x"></i></a>
+                </p>
+              </div>
+
+                <?php
+                endwhile;
+	            endif; ?>
+            </div>
+            </div>
+          </div>
+        </div>
+
+          <div class="functionnal-row darkened_background">  
+            <div class="container">
+              <div class="col-md py-2 align-items-center ">
+                <?php
                  
-      
-      <div id="footer_coordonnees_content">
-            ASBL THE LAYERS PROJECT <br>
-            Rue des charbonniers 12 <br>
-            1020 Bruxelles <br>
-            <br>
-            TEL : <a href="callto:+3227343434" class="footer_link">+322 734 34 34</a>  <br>
-            MAIL : <a href="mailto:layersproject.belgium@gmail.com" class="footer_link"> layers.project@gmail.com </a><br>
-      </div>
-    
+	                $params = array('pagename' => 'sub-footer');
+	                $the_query = new WP_Query($params);
 
-
-      <span id="footer_map_titre"> map du site</span>
-  
-      <div id="footer_map_content">
-        
-        <p>
-            <a href="index.php" class="footer_link"> Accueil</a> <br>
+	                if ( $the_query->have_posts() ) :
+		                while ( $the_query->have_posts() ) :
+                      $the_query->the_post(); ?>
+                  
+                  <span><?php the_content() ?></span>
+              
+                <?php
+                  endwhile;
+	              endif; ?>
+              </div>
+            </div>
             
-            <a href="projet.php" class="footer_link">Projet</a> <br>
-            
-            <a href="asbl.php" class="footer_link">ASBL</a> <br>
-            <br>
-            <a href="agenda.php" class="footer_link">Agenda</a> <br>
-            
-            <a href="news.php" class="footer_link">News</a> <br>
-            
-        </p>
+          </div>
 
-      </div>
-
-      
-      <span id="footer_asbl_titre">l'asbl</span>
-
-      <div id="footer_asbl_content">
-        
-        <p>
-          Nous sommes une jeune ASBL belge qui a pour but de promouvoir le projet d'aménagement des villes dans l'optique de l'optimisation de la circulation, la modernité, l'écologie et le confort dans les transports. 
-          <br>
-          <br>
-          Rejoignez-nous sur les réseaux : <br>
-          <a href="https://www.facebook.com/The-Layers-Project-438733686661474/?modal=admin_todo_tour"><i class="fab fa-facebook-square fa-2x"></i></a>
-          <a href="https://twitter.com"><i class="fab fa-instagram fa-2x"></i></a>  
-          <a href="https://instagram.com"><i class="fab fa-twitter-square fa-2x"></i></a>
-        </p>
-
-      </div>
-
-      
-      <span id="footer_copyright">
-          
-        <span id="footer_copyright_content">
-            COPYRIGHT 2018 | Tous droits réservés | 
-            <a href="index.php" class="footer_link">thelayersproject.be</a> | 
-            <a href="conditions.php" class="footer_link"> Conditions générales d'utilisation </a> 
-            et 
-            <a href="mentions_legales.php" class="footer_link"> Mentions Légales</a>
-      
-        </span>
-        
-      </span>  
-    
     </footer>
 
+    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
-
 
   </body>
 

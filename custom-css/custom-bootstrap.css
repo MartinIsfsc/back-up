@@ -72,10 +72,7 @@ body{
          padding-bottom: calc(var(--jumbotron-padding-y) * 2);
        }
 }
-     
-.jumbotron p:last-child {
-       margin-bottom: 0;
-}
+
      
 .jumbotron .container {
        max-width: 80rem;
@@ -99,12 +96,6 @@ body{
 
 div a .navbar-title{
        font-size: 8vw;
-}
-
-@media (min-width: 768px){
-       #navbarNav{
-              padding-left : 0; 
-       }
 }
 
 .navbar-nav {
@@ -200,19 +191,90 @@ div a .navbar-title{
        color: #ffffff;
 }
 
-.card{
-       transition: 0.5s;
-       box-shadow: 16px 8px 16px 10px rgba(0,0,0,0); 
+@media (min-width : 768px){
+       .card{
+              transition: 0.5s;
+              box-shadow: 16px 8px 16px 10px rgba(0,0,0,0); 
+       }
+       
+       .card:hover{
+              box-shadow: 10px 8px 16px 0 rgba(0,0,0,0.5);
+       }
+       
+       /* .card a img :hover{
+              box-shadow: 15px 10px 10px 10px rgba(0,0,0,0.5) inset ;
+       } */
 }
 
-.card:hover{
-       box-shadow: 10px 8px 16px 0 rgba(0,0,0,0.5);
+.card-link{
+       font-size: 1.5rem;
+       text-decoration: none;
+       transition: 0.3s;
+       font-weight: 600;
+       color: #444444;
 }
 
-.card a img :hover{
-       box-shadow: 15px 10px 10px 10px rgba(0,0,0,0.5) inset ;
+.card-link:hover, .card-link:active{
+       font-weight: 600;
+       text-decoration: underline;
+       color: #66ed5d;
 }
+
 
 
 
 /* FOOTER */
+footer{
+       background-color: #707070;
+}
+
+.darkened_background{
+       background-color: black;
+}
+
+.footer_text{
+       font-size: 1.25rem;
+       color: white;
+}
+
+.footer_title{
+       font-weight: 600;
+}
+
+.footer_link{
+       font-weight: 600;
+       text-decoration: none;
+       font-size: 1.25rem;
+}
+   
+.footer_link:link, .footer_link:visited{
+       color : #66ed5d;
+}
+   
+.footer_link:hover, .footer_link:active{
+       text-decoration: underline;
+}
+
+.fab{
+       margin : 10px;
+       color: #66ed5d;
+}
+   
+.fab:link, .fab:visited{
+       color: #66ed5d;
+}
+   
+.fab:hover, .fab:active{
+       color: white;
+}
+
+footer li a{
+       text-decoration: none;
+       color: #66ed5d;
+       font-size: 1.25rem;
+}
+
+footer li a:hover{
+       color: #66ed5d;
+       text-decoration: underline;
+}

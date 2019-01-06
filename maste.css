@@ -354,19 +354,6 @@ div#agenda_event_block1:hover img, div#agenda_event_block2:hover img, div#agenda
 
 
 /* FOOTER */
-
-footer{
-    background-color: #737373;
-    display: grid;
-    grid-template-columns: 1vw repeat(12, 1fr) 1vw;
-    grid-column-gap: 30px;
-    grid-template-rows: 2vw 10vw 2vw;
-    grid-row-gap: 30px;
-    padding-top: 1vw;
-    font-size: 1.25rem;
-    color: white;
-}
-
 #footer_coordonnees_titre{
     grid-column: 3/5;
     grid-row: 1;
@@ -406,18 +393,6 @@ footer{
     grid-row: 2;
 }
 
-.fab{
-    margin : 10px;
-    color: #66ed5d;
-}
-
-.fab:link, .fab:visited{
-    color: #66ed5d;
-}
-
-.fab:hover, .fab:active{
-    color: white;
-}
 
 #footer_copyright{
     grid-column: 1 / 15;
@@ -436,19 +411,6 @@ footer{
     padding-bottom: 5px;
 }
 
-.footer_link{
-    font-weight: 600;
-    text-decoration: none;
-    font-size: 1.25rem;
-}
-
-.footer_link:link, .footer_link:visited{
-    color : #66ed5d;
-}
-
-.footer_link:hover, .footer_link:active{
-    text-decoration: underline;
-}
 
 
 
