@@ -28,10 +28,10 @@
 
     <header> 
        <nav class="menu-container navbar navbar-dark navbar-expand-lg fixed-top" >
-          <div class="container d-flex justify-content-between">
+          <div class="container">
 
-              <a href="<?php echo get_home_url(); ?>" class="navbar-brand d-flex align-items-center">
-                <p class="d-md-none uppercase" >the layers project</p>
+              <a href="<?php echo get_home_url(); ?>" class="navbar-brand">
+                <h2 class="d-md-none uppercase navbar-title text-center" >the layers project</h2>
                 <img src="<?php bloginfo('template_directory') ?>/image/tlp_blanc.png" alt="THE LAYERS PROJECT" class="d-none d-md-block align-center menu-logo-link">
                  
               </a>  

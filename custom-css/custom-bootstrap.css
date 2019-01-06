@@ -1,9 +1,85 @@
-/* HEADER */
+/* Commun */
+*{
+       box-sizing: border-box;
+}
+   
+html{
+       margin: 0 !important;
+}
+
+body{
+       font-family: 'Exo';
+       background-color: #444444;
+       max-width: 1920px;
+       margin : 0;
+}
+
+.wide-container{
+       max-width: 2560px;
+}
 
 .uppercase{
        text-transform: uppercase;
 }
 
+
+.title_link{
+       font-size : 1.75rem;
+       font-weight: 600;
+       justify-self: center;
+       align-self: center;
+       border-color: #ffffff;
+       border-radius: 15px;
+       padding: 4px 10px;
+       transition: 0.4s;
+       background-color: #11ffee00;
+}
+   
+.title_link:link, .title_link:visited{
+       color : #66ed5d;
+       text-decoration: none;
+}
+   
+.title_link:hover, .title_link:active{
+       background-color: #000000;    
+       padding: 4px 10px;  
+}
+
+.lightened:hover, .lightened:active{
+       background-color: #444444;
+}
+
+
+/* JUMBOTRON */
+:root {
+       --jumbotron-padding-y: 3rem;
+}
+     
+.jumbotron {
+       padding-top: var(--jumbotron-padding-y);
+       padding-bottom: var(--jumbotron-padding-y);
+       margin-bottom: 0;
+       background-color: #11ffee00;
+}
+
+@media (min-width: 768px) {
+       .jumbotron {
+         padding-top: calc(var(--jumbotron-padding-y) * 2);
+         padding-bottom: calc(var(--jumbotron-padding-y) * 2);
+       }
+}
+     
+.jumbotron p:last-child {
+       margin-bottom: 0;
+}
+     
+.jumbotron .container {
+       max-width: 80rem;
+}
+
+
+
+/* HEADER */
 .menu-container{
        margin: 0 ;
        background-color: black;
@@ -17,11 +93,11 @@
        width : 100%;
 }
 
-@media (min-width: 768px){
-       .menu-logo-link{
-              margin-left: 0;
-       }
+div a .navbar-title{
+       font-size: 8vw;
+}
 
+@media (min-width: 768px){
        #navbarNav{
               padding-left : 0; 
        }
@@ -35,6 +111,8 @@
        padding: .5rem 1rem;
        text-transform: uppercase;
        font-size: 1.2rem;
+       transition: 0.3s;
+       background-color: #11ffee00;
 }
 
 .menu-container .menu-item a:link, .menu-container .menu-item a:visited{
@@ -44,10 +122,11 @@
        font-weight: 800;
 }
    
-.menu-container .menu-item a:hover, .menu-container .menu-item a:active{
+.menu-container .menu-item a:hover{
        background-color: #444444;
        padding: .5rem 1rem;    
 }
+
 
 
 
@@ -55,20 +134,14 @@
 .slogan {
        background-image: url("../image/landscape.png");
        background-size: auto;
-       background-position: center center ;
+       background-position:  center;
        background-repeat: no-repeat;
-       height: 600px;
+       height: 700px;
 }
-   
-.slogan .col{
-       justify-self: center;
-       align-self: center;
-       padding-top : 15rem ;
-       padding-bottom: 10rem;
-}
+
    
 .slogan_titre{
-       font-size: 3rem;
+       font-size: 2.5rem;
        justify-self: center;
        align-self: center;
        color : white ;
@@ -76,38 +149,58 @@
        text-shadow: 5px 2px black;
 }
 
-:root {
-       --jumbotron-padding-y: 2rem;
-}
-     
-.jumbotron {
-       padding-top: var(--jumbotron-padding-y);
-       padding-bottom: var(--jumbotron-padding-y);
-       margin-bottom: 0;
-       background-color: #444444;
-}
 
-/* @media (min-width: 768px) {
-       .jumbotron {
-         padding-top: calc(var(--jumbotron-padding-y) * 2);
-         padding-bottom: calc(var(--jumbotron-padding-y) * 2);
-       }
-} */
-     
-.jumbotron p:last-child {
-       margin-bottom: 0;
-}
-     
-.jumbotron .container {
-       max-width: 80rem;
-}
 
+
+/* INTRO */
 .intro_texte p{
-       font-size: 1rem;
+       font-size: 1.25rem;
        padding-top: 2rem; 
 }
 
 .intro_texte blockquote p{
        font-size: 1.5rem;
        font-weight: 600;
+}
+
+
+.intro_texte{
+       font-size : 1.25rem;
+       color: #ffffff;
+       justify-self: center;
+       text-align : justify;
+}
+
+
+
+
+/* AGENDA */
+.agenda_event_date{
+       font-size: 1.5rem ;
+       margin-left: 0 ;
+       color : white ;
+       font-weight: 600;
+       text-shadow: 3px 2px black;
+       text-transform: uppercase;
+       text-decoration: none;
+       width: auto;
+}
+
+.agenda_event_date:link, .agenda_event_date:visited{
+       text-decoration: none;
+       color: #ffffff;
+}
+
+.agenda_event_date:hover, .agenda_event_date:active{
+       text-decoration: none;
+       color: #ffffff;
+}
+
+.card{
+       transition: 0.5s;
+       box-shadow: 0 8px 16px 0 rgba(0,0,0,0); 
+}
+
+.card:hover{
+       box-shadow: 0 8px 16px 0 rgba(0,0,0,0.5);
 }

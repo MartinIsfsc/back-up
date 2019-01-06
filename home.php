@@ -3,9 +3,9 @@
     
     <!-- LE SLOGAN -->
     
-    <section class="slogan jumbotron text-center">
+    <section class="slogan jumbotron text-center d-flex align-items-center">
 
-      <div class="col-sm row">
+      <div class="col-sm align-items-center">
 	    <?php
 	    $params = array('pagename' => 'slogan');
 	    $the_query = new WP_Query($params);
@@ -14,7 +14,7 @@
 		    while ( $the_query->have_posts() ) :
 			    $the_query->the_post(); ?>
 
-          <span class="slogan_titre col"><?php the_content() ?></span>
+          <span class="slogan_titre "><?php the_content() ?></span>
 
 		    <?php
 		    endwhile;
@@ -37,8 +37,8 @@
 		      while ( $the_query->have_posts() ) :
 			      $the_query->the_post(); ?>
 
-            <a href="<?php the_permalink() ?>" class="intro_link uppercase text-center"><?php the_title() ?></a>
-            <div class="intro_texte text-center"><?php the_content() ?></div>
+            <a href="<?php the_permalink() ?>" class="title_link uppercase text-center"><?php the_title() ?></a>
+            <div class="intro_texte"><?php the_content() ?></div>
 		      <?php
 		      endwhile;
 	      endif; ?>
@@ -49,42 +49,117 @@
     
     <!-- L'agenda -->
     
-    <section id="agenda_container d-flex">
+    <section class="py-5 bg-light">
         
-      <!-- <a href="agenda.php" id="agenda_link"> agenda</a>
-      
-      
-      <a href="event_laurent_alexandre" id="agenda_event_block1_link">
-        <div id="agenda_event_block1">  
-          <img src="image/laurent_alexandre.jpeg" id="agenda_event_image1" alt="laurent alexandre">
-          <p class="agenda_event_date" id="agenda_event_date1">21 / 11 conférence de laurent alexandre</p>
+      <div class="row pb-3">
+        <div class="px-3 py-3 pt-md-4 pb-md-4 mx-auto text-center">
+          <a href="agenda.php" class="title_link uppercase lightened"> agenda</a>
         </div>
-      </a>
-
-      <div id="agenda_event_block2"> 
-        
-        <img src="image/elon_musk.jpg" id="agenda_event_image2" alt="elon musk">
-        
-        <p class="agenda_event_date" id="agenda_event_date2">11 / 02 conférence d'elon musk</p>
-      
       </div>
+        
+        <div class="wide-container mx-sm-2 mx-md-5">
+          <div class="row">
 
-      
-      <div id="agenda_event_block3"> 
+	          <?php
+	          $params = array('category_name' => 'agenda','posts_per_page' => 3);
+	          $the_query = new WP_Query($params);
 
-        <img src="image/journee_sans_voitures.png" id="agenda_event_image3" alt="groupe en vélo devant monument">
+	          if ( $the_query->have_posts() ) :
+		          while ( $the_query->have_posts() ) :
+			          $the_query->the_post(); ?>
 
-        <p class="agenda_event_date" id="agenda_event_date3">22 / 09 journée sans voitures</p>
+            <div class="col-md-4 card-group">
+              <div class="card mb-4">
 
-      </div> -->
+	              <?php
+	              if(get_the_post_thumbnail_url()): ?>
+                  <a href="<?php the_permalink(); ?>">
+                    <img class="card-img" src="<?php the_post_thumbnail_url() ?>" alt="Evénément">
+                  </a>
+	              <?php endif; ?>
 
+                <div class="card-img-overlay px-4 py4">
+                  <p class="card-title uppercase">
+                    <a href="<?php the_permalink() ; ?>" class="agenda_event_date">
+                      <?php the_title() ; ?>
+                    </a>
+                  </p>
+                  <p class="card-text">
+                    <?php the_excerpt() ; ?>
+                  </p>
+                  
+                </div>
+              </div>
+            </div>
+
+    	    <?php
+    		    endwhile;
+    	    endif;
+    	    ?>
+          </div>
+        </div>
 
     </section>
 
     
     <!-- Les News -->
     
-    <section id="news_container d-flex">
+    <section class="py-5">
+      
+      <div class="row pb-3">
+        <div class="px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+          <a href="news.php" class="title_link uppercase">news</a>
+        </div>
+      </div>
+      
+      <div class="wide-container wide-container mx-sm-2 mx-md-5">
+        <div class="row">
+
+	        <?php
+	        $params = array('category_name' => 'news','posts_per_page' => 4);
+	        $the_query = new WP_Query($params);
+
+	        if ( $the_query->have_posts() ) :
+		        while ( $the_query->have_posts() ) :
+			        $the_query->the_post(); ?>
+
+          <div class="col-md-3 card-group">
+            <div class="card mb-3 shadow-sm">
+
+	            <?php
+	            if(get_the_post_thumbnail_url()): ?>
+                <a href="<?php the_permalink(); ?>">
+                  <img class="card-img-top" src="<?php the_post_thumbnail_url() ?>" alt="Card image cap">
+                </a>
+	            <?php endif; ?>
+
+              <div class="card-body">
+                <p class="card-text">
+                  <a href="<?php the_permalink() ; ?>">
+                    <?php the_title() ; ?>
+                  </a>
+                </p>
+                <p class="card-text">
+                  <?php the_excerpt() ; ?>
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <a href="<?php the_permalink() ; ?>" class="btn btn-sm btn-outline-secondary">Plus</a>
+                  </div>
+                  <small class="text-muted"><?php the_date() ; ?></small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+    	  <?php
+    		  endwhile;
+    	  endif;
+    	  ?>
+        </div>
+      </div>
+    </section>
+
 
       <!-- <a href="news.php" id="news_link">news</a>
 
