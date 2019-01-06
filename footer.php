@@ -33,7 +33,7 @@
 	            wp_nav_menu(array(
                 'theme_location' => 'bottom-contact',
                 
-		            'menu_class' => 'list-unstyled mt-4',
+		            'menu_class' => 'list-unstyled petite-marge-top',
 	            ));
 	            ?>
             </div>
@@ -44,7 +44,7 @@
 	            wp_nav_menu(array(
                 'theme_location' => 'bottom-map',
                 
-		            'menu_class' => 'list-unstyled ',
+		            'menu_class' => 'list-unstyled petite-marge',
 	            ));
 	            ?>
             </div>   

@@ -14,6 +14,10 @@ body{
        margin : 0;
 }
 
+p{
+       margin: 0;
+}
+
 .wide-container{
        max-width: 2560px;
 }
@@ -76,6 +80,10 @@ body{
      
 .jumbotron .container {
        max-width: 80rem;
+}
+
+.petite-marge-top{
+       margin-top: 30px,
 }
 
 
@@ -258,6 +266,7 @@ footer{
 .fab{
        margin : 10px;
        color: #66ed5d;
+       transition: 0.3s;
 }
    
 .fab:link, .fab:visited{

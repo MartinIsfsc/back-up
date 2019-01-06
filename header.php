@@ -11,7 +11,6 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
      
     <!-- MON CSS -->
-    <link rel="stylesheet" href="<?php bloginfo('template_directory') ?>/custom-css/master.css">
     <link rel="stylesheet" href="<?php bloginfo('template_directory') ?>/custom-css/custom-bootstrap.css">
     
     <!-- FONTS ET ICONS -->
