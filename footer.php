@@ -7,10 +7,8 @@
       <div class="functionnal-row">
           <div class="container">
             <div class="row d-flex">
-            <div class="col-md-4 py-4">
+            <div class="col-md-4 py-5">
               <?php
-                // On récupère la "page" ayant "a-propos-de-nous" comme slug.
-                // Docs: https://developer.wordpress.org/reference/classes/wp_query/
 	              $params = array('pagename' => 'coordonnees');
 	              $the_query = new WP_Query($params);
 
@@ -38,18 +36,18 @@
 	            ?>
             </div>
             
-            <div class="col-md-2 py-4">
+            <div class="col-md-2 py-5">
               <h4 class="uppercase">map du site</h4>
 	            <?php
 	            wp_nav_menu(array(
                 'theme_location' => 'bottom-map',
                 
-		            'menu_class' => 'list-unstyled petite-marge',
+		            'menu_class' => 'list-unstyled petite-marge-top',
 	            ));
 	            ?>
             </div>   
             
-            <div class="col-md-6 py-4">
+            <div class="col-md-6 py-5">
 	            <?php
 	            $params = array('pagename' => 'a-propos');
 	            $the_query = new WP_Query($params);
@@ -79,7 +77,7 @@
 
           <div class="functionnal-row darkened_background">  
             <div class="container">
-              <div class="col-md py-2 align-items-center ">
+              <div class="col-md py-3 align-items-center ">
                 <?php
                  
 	                $params = array('pagename' => 'sub-footer');
