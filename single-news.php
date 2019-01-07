@@ -14,14 +14,14 @@
 
               <div class="d-flex mb-5 row">
                      
-                     <div class="mt-5 col-lg-6 card">
+                     <div class="pt-5 col-lg-6">
                             <?php 
                             if(get_the_post_thumbnail_url()): ?>
-                                   <img class="img-intro card-image" src="<?php the_post_thumbnail_url() ?>" alt="Image de présentation de l'événement">
+                                   <img class="img-intro" src="<?php the_post_thumbnail_url() ?>" alt="Image de présentation de l'événement">
                             <?php endif; ?>
                      </div>
                      
-                     <div class="justify-content-center col-lg-6 event-content-padding article-presentation">
+                     <div class="justify-content-center col-lg-6 event-content-padding">
                             <?php the_content()?> 
                      </div>
                      

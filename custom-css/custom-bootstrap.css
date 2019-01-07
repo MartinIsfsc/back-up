@@ -10,12 +10,13 @@ html{
 body{
        font-family: 'Exo';
        background-color: #444444;
-       max-width: 1920px;
        margin : 0;
+       justify-content: center;
 }
 
 p{
        margin: 0;
+       line-height: 2.25rem;
 }
 
 .wide-container{
@@ -30,6 +31,13 @@ p{
        text-transform: uppercase;
 }
 
+.font-weight-600{
+       font-weight: 600;
+}
+
+.text-no-deco{
+       text-decoration: none;
+}
 
 .title_link{
        font-size : 1.75rem;
@@ -56,6 +64,11 @@ p{
 .lightened:hover, .lightened:active{
        background-color: #444444;
 }
+
+
+
+
+
 
 
 /* JUMBOTRON */
@@ -85,6 +98,14 @@ p{
 .petite-marge-top{
        margin-top: 30px;
 }
+
+
+
+
+
+
+
+
 
 
 
@@ -133,100 +154,9 @@ div a .navbar-title{
 
 
 
-/* SLOGAN */
-.slogan {
-       background-image: url("../image/landscape.png");
-       background-size: auto;
-       background-position:  center;
-       background-repeat: no-repeat;
-       height: 700px;
-}
-
-   
-.slogan_titre{
-       font-size: 2.5rem;
-       justify-self: center;
-       align-self: center;
-       color : white ;
-       font-weight: 600;
-       text-shadow: 5px 2px black;
-}
 
 
 
-
-/* INTRO */
-.intro_texte p{
-       font-size: 1.25rem;
-       padding-top: 2rem; 
-}
-
-.intro_texte blockquote p{
-       font-size: 1.5rem;
-       font-weight: 600;
-}
-
-
-.intro_texte{
-       font-size : 1.25rem;
-       color: #ffffff;
-       justify-self: center;
-       text-align : justify;
-}
-
-
-
-
-/* AGENDA  et NEWS*/
-.agenda_event_date{
-       font-size: 1.5rem ;
-       margin-left: 0 ;
-       color : white ;
-       font-weight: 600;
-       text-shadow: 3px 2px black;
-       text-transform: uppercase;
-       text-decoration: none;
-       width: auto;
-}
-
-.agenda_event_date:link, .agenda_event_date:visited{
-       text-decoration: none;
-       color: #ffffff;
-}
-
-.agenda_event_date:hover, .agenda_event_date:active{
-       text-decoration: none;
-       color: #ffffff;
-}
-
-@media (min-width : 768px){
-       .card{
-              transition: 0.5s;
-              box-shadow: 16px 8px 16px 10px rgba(0,0,0,0); 
-       }
-       
-       .card:hover{
-              box-shadow: 10px 8px 16px 0 rgba(0,0,0,0.5);
-       }
-       
-       /* .card a img :hover{
-              box-shadow: 15px 10px 10px 10px rgba(0,0,0,0.5) inset ;
-       } */
-}
-
-.card-link{
-       font-size: 1.5rem;
-       text-decoration: none;
-       transition: 0.3s;
-       font-weight: 600;
-       color: #444444;
-}
-
-.card-link:hover, .card-link:active{
-       font-weight: 600;
-       text-decoration: underline;
-       color: #66ed5d;
-}
 
 
 
@@ -243,10 +173,6 @@ footer{
 .footer_text{
        font-size: 1.25rem;
        color: white;
-}
-
-.footer_title{
-       font-weight: 600;
 }
 
 .footer_link{
@@ -286,4 +212,192 @@ footer li a{
 footer li a:hover{
        color: #66ed5d;
        text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+/* SLOGAN */
+.slogan {
+       background-image: url("../image/landscape.png");
+       background-size: auto;
+       background-position:  center;
+       background-repeat: no-repeat;
+       height: 700px;
+}
+
+.slogan_titre{
+       font-size: 2.5rem;
+       justify-self: center;
+       align-self: center;
+       color : white ;
+       font-weight: 600;
+       text-shadow: 5px 2px black;
+}
+
+
+
+
+
+
+
+/* INTRO */
+.intro_texte p{
+       font-size: 1.25rem;
+       padding-top: 2rem; 
+}
+
+.intro_texte blockquote p{
+       font-size: 1.5rem;
+       font-weight: 600;
+       line-height: 2.7rem;
+}
+
+.intro_texte{
+       font-size : 1.25rem;
+       color: #ffffff;
+       justify-self: center;
+       text-align : justify;
+}
+
+
+
+
+
+
+/* AGENDA  et NEWS*/
+.card-title{
+       font-size: 1.5rem ;
+       margin-left: 0 ;
+       color : white ;
+       font-weight: 600;
+       text-shadow: 3px 2px black;
+       text-transform: uppercase;
+       text-decoration: none;
+       width: auto;
+}
+
+.card-title:link, .card-title:visited{
+       text-decoration: none;
+       color: #ffffff;
+}
+
+.card-title:hover, .card-title:active{
+       text-decoration: none;
+       color: #ffffff;
+}
+
+@media (min-width : 768px){
+       .card{
+              transition: 0.5s;
+              box-shadow: 16px 8px 16px 10px rgba(0,0,0,0); 
+       }
+       
+       .card:hover{
+              box-shadow: 10px 8px 16px 0 rgba(0,0,0,0.5);
+       }
+       
+       /* .card a img :hover{
+              box-shadow: 15px 10px 10px 10px rgba(0,0,0,0.5) inset ;
+       } */
+}
+
+.card-link{
+       font-size: 1.5rem;
+       text-decoration: none;
+       transition: 0.3s;
+       font-weight: 600;
+       color: #444444;
+}
+
+.card-link:hover, .card-link:active{
+       font-weight: 600;
+       text-decoration: underline;
+       color: #66ed5d;
+}
+
+a .card-image-overlay .card-text p{
+       font-size: 1.90rem;
+       transition: 0.5s;
+}
+
+a .card-image-overlay .card-text p:link, a .card-image-overlay .card-text p:visited{
+       text-decoration: none;
+       text-shadow: 3px 2px black;
+       color : white ;
+}
+
+a .card-image-overlay .card-text p:hover,a .card-image-overlay .card-text p:active{
+       display: block;
+       text-decoration: none;
+       text-shadow: 3px 2px black;
+       color : white ;
+}
+
+
+
+
+
+
+
+
+/* ARCTICLE ET EVENEMENTS INDIVIDUELS */
+.img-intro{
+       width: 100%;
+       height: 100%;
+       max-width: 700px;
+}
+
+.padding-intro{
+       padding-top: 5rem;
+}
+
+@media (max-width: 992px){
+       
+       .padding-intro{
+              padding-top : 7rem;
+       }
+}
+
+.event-content-padding{
+       padding-top: 5rem;
+} 
+
+@media (min-width: 992px){
+       .event-content-padding{
+              padding-top: 12rem;
+       }
+}
+
+@media (min-width: 1200px){
+       .event-content-padding{
+              padding-top: 15rem;
+       }
+}
+
+.article-presentation p{
+       font-size: 1.2rem;
+}
+
+main section div .card{
+       padding: 1px;
+       box-shadow: 10px 8px 16px 0 rgba(0,0,0,0.5);
+}
+
+
+
+
+
+
+/* LES PAGES */
+.page-title{
+       font-size : 2rem;
+       font-weight: 600;
+       justify-self: center;
+       align-self: center;
+       color: #ffffff;
 }

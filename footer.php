@@ -7,7 +7,7 @@
       <div class="functionnal-row">
           <div class="container">
             <div class="row d-flex">
-            <div class="col-md-4 py-5">
+            <div class="col-md-3 py-5">
               <?php
 	              $params = array('pagename' => 'coordonnees');
 	              $the_query = new WP_Query($params);
@@ -17,9 +17,9 @@
 			              $the_query->the_post(); ?>
 
                 <h4>
-                  <p href="<?php the_title() ?>" class="uppercase"><?php the_title() ?></p>
+                  <p href="<?php the_title() ?>" class="uppercase font-weight-600"><?php the_title() ?></p>
                 </h4>
-                <div class="">
+                <div >
                     <?php the_content() ?>
                 </div>
 
@@ -36,8 +36,8 @@
 	            ?>
             </div>
             
-            <div class="col-md-2 py-5">
-              <h4 class="uppercase">map du site</h4>
+            <div class="col-md-3 py-5">
+              <h4 class="uppercase font-weight-600">map du site</h4>
 	            <?php
 	            wp_nav_menu(array(
                 'theme_location' => 'bottom-map',
@@ -57,7 +57,7 @@
 			            $the_query->the_post(); ?>
 
               <h4>
-                <p href="<?php the_permalink() ?>" class=" uppercase"><?php the_title() ?></p>
+                <p href="<?php the_permalink() ?>" class="font-weight-600 uppercase"><?php the_title() ?></p>
               </h4>
               <div>
                   <?php the_content() ?>
@@ -77,7 +77,7 @@
 
           <div class="functionnal-row darkened_background">  
             <div class="container">
-              <div class="col-md py-3 align-items-center ">
+              <div class="col-md py-2 align-items-center ">
                 <?php
                  
 	                $params = array('pagename' => 'sub-footer');
