@@ -69,7 +69,7 @@
 			          $the_query->the_post(); ?>
 
             <div class="col-lg card-group">
-              <div class="card mb-4 mx-lg-3">
+              <div class="card card-shadow mb-4 mx-lg-3">
 
 	              <?php
 	              if(get_the_post_thumbnail_url()): ?>

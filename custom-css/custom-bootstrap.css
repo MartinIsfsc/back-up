@@ -370,6 +370,7 @@ a .card-image-overlay .card-text p:hover,a .card-image-overlay .card-text p:acti
 @media (min-width: 992px){
        .event-content-padding{
               padding-top: 12rem;
+              padding-left: 3rem;
        }
 }
 
@@ -383,7 +384,7 @@ a .card-image-overlay .card-text p:hover,a .card-image-overlay .card-text p:acti
        font-size: 1.2rem;
 }
 
-main section div .card{
+main section div .card-shadow{
        padding: 1px;
        box-shadow: 10px 8px 16px 0 rgba(0,0,0,0.5);
 }
@@ -395,9 +396,20 @@ main section div .card{
 
 /* LES PAGES */
 .page-title{
-       font-size : 2rem;
+       font-size : 3rem;
        font-weight: 600;
        justify-self: center;
        align-self: center;
        color: #ffffff;
+}
+
+.page-subtitle{
+       font-size: 2rem;
+       font-weight: 400;
+       justify-self: center;
+       color : white;
+}
+
+.card-modulable{
+       padding : 0;
 }

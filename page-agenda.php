@@ -4,39 +4,93 @@
 
     <section class="container py-5 ">
       
-      <h1 class="page-title text-center"><?php the_title()?></h1>
+      <h1 class="page-title text-center padding-intro pb-3"><?php the_title()?></h1>
+
+      <h2 class="page-subtitle text-center py-3"> C'est pour bientôt !</h2>
 
       <div class="row">
-          
+        
+        <div class="wide-container col-lg card-deck">          
           <?php
-            $params = array('category_name' => 'agenda', 'posts_per_page' => 2);
+            $params = array('category_name' => 'nearest-event+agenda', 'posts_per_page' => 2);
 	          $the_query = new WP_Query($params);
 
 	          if ( $the_query->have_posts() ) :
 		          while ( $the_query->have_posts() ) :
 			          $the_query->the_post(); ?>
-            
-            <div class="card col-6">
-              
-              <?php
-	              if(get_the_post_thumbnail_url()): ?>
-                  <a href="<?php the_permalink(); ?>">
-                    <img class="card-link" src="<?php the_post_thumbnail_url() ?>" alt="Image pour l'événement">
-                  </a>
-	            <?php endif; ?>
-              
-              <h1 class="jumbotron-heading"><?php the_title() ?></h1>
-              <div class="lead text-muted"><?php the_content() ?></div>
-
-            
-            </div>    
-            
-              <?php
-            endwhile;
-          endif; ?>
           
+
+            <div class="card card-modulable col-lg-6 mb-4">
+
+                <?php
+                if(get_the_post_thumbnail_url()): ?>
+                    <img class="card-img" src="<?php the_post_thumbnail_url() ?>" alt="Evénément">
+                <?php endif; ?>
+                              
+                <a href="<?php the_permalink() ; ?>"  class="text-no-deco">
+                  <div class="card-img-overlay px-4 py4">
+                    <p class="card-title uppercase">
+                      <?php the_title() ; ?>
+                    </p>
+                    <p class="card-text">
+                      <?php the_excerpt() ; ?>
+                    </p>
+                  </div>
+                </a>
+                              
+            </div>
+                              
+                <?php
+              endwhile;
+              endif;
+            ?>
         
+          </div>
       </div>
+
+
+
+      <h2 class="page-subtitle text-center py-3 petite-marge-top"> On a encore le temps...</h2>
+
+      <div class="wide-container mx-sm-2 mx-md-5">
+          <div class="row">
+
+	          <?php
+            $params = array('category_name' =>'plus-loin');
+	          $the_query = new WP_Query($params);
+
+	          if ( $the_query->have_posts() ) :
+		          while ( $the_query->have_posts() ) :
+			          $the_query->the_post(); ?>
+
+            <div class="col-lg card-group">
+              <div class="card card-modulable mb-4 mx-lg-3">
+
+	              <?php
+	              if(get_the_post_thumbnail_url()): ?>
+                    <img class="card-img" src="<?php the_post_thumbnail_url() ?>" alt="Evénément">
+	              <?php endif; ?>
+                
+                <a href="<?php the_permalink() ; ?>"  class="text-no-deco">
+                  <div class="card-img-overlay px-4 py4">
+                    <p class="card-title uppercase">
+                      <?php the_title() ; ?>
+                    </p>
+                    <p class="card-text">
+                      <?php the_excerpt() ; ?>
+                    </p>
+                  </div>
+                </a>
+              
+              </div>
+            </div>
+
+    	      <?php
+    		      endwhile;
+    	      endif;
+    	      ?>
+          </div>
+        </div>
 
     </section>
 
@@ -44,48 +98,5 @@
 </main>
 
 
-
-
-
-
-                  <h1 class="agenda_titre">Agenda</h1>
-
-
-
-                  <div class="nearest_event1">
-                    <img src="image/agenda1.jpg" id="agenda_photo1">
-                  </div>
-
-
-
-                  <p class="nearest_event_date" id="nearest_event-date1">21 / 11 conférence de laurent alexandre</p>
-
-
-
-                  <div class="nearest_event2">
-                    <img src="image/agenda1.jpg" id="agenda_photo2">
-                  </div>
-
-
-
-                  <p class="nearest_event_date" id="nearest_event-date2">11 / 02 conférence d'elon musk</p>
-
-
-
-                  <section class="agenda_container">
-
-                     <img src="image/laurent_alexandre.jpeg" id="agenda_event1" alt="laurent alexandre">
-
-                     <p class="agenda_event_date" id="agenda_event-date1">21 / 11 conférence de laurent alexandre</p>
-
-                     <img src="image/elon_musk.jpg" id="agenda_event2" alt="elon musk">
-
-                     <p class="agenda_event_date" id="agenda_event-date2">11 / 02 conférence d'elon musk</p>
-
-                     <img src="image/journee_sans_voitures.png" id="agenda_event3" alt="groupe en vélo devant monument">
-
-                     <p class="agenda_event_date" id="agenda_event-date3">22 / 09 journée sans voitures</p>
-
-                  </section>
 
 <?php get_footer() ?>
