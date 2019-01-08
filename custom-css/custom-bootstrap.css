@@ -429,9 +429,23 @@ main section div .card-shadow{
        padding : 0;
 }
 
-.project-content{
-       font-size: 1.5rem;
+.page-normal-content{
+       font-size: 1.25rem;
        font-weight: 500;
        justify-content: center;
+       color: #ffffff;
+}
+
+@media(min-width:1200px){
+       .page-normal-content{
+              font-size: 1.5rem;
+       }
+}
+
+.asbl-left-image{
+       width: 100%;
+       border: 1px solid white;
+       border-radius: 1px;
+
 }
 

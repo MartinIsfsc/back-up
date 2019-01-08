@@ -76,12 +76,12 @@
                     <img class="card-img" src="<?php the_post_thumbnail_url() ?>" alt="Evénément">
 	              <?php endif; ?>
                 
-                <a href="<?php the_permalink() ; ?>"  class="">
+                <a href="<?php the_permalink() ; ?>"  class="text-no-deco">
                   <div class="card-img-overlay px-4 py4">
                     <p class="card-title uppercase">
                       <?php the_title() ; ?>
                     </p>
-                    <p class="card-text text-no-deco">
+                    <p class="card-text">
                       <?php the_excerpt() ; ?>
                     </p>
                   </div>

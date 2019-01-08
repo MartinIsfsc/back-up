@@ -12,7 +12,7 @@
         
         <div class="wide-container col-lg card-deck">          
           <?php
-            $params = array('category_name' => 'nearest-event+agenda', 'posts_per_page' => 2);
+            $params = array('category_name' => 'nearest-event', 'posts_per_page' => 2);
 	          $the_query = new WP_Query($params);
 
 	          if ( $the_query->have_posts() ) :
