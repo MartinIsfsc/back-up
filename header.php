@@ -9,15 +9,20 @@
     
     <!-- BOOTSTRAP -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+
+    <!-- AOS ANIMATIONS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
      
-    <!-- MON CSS -->
+    <!-- MON CSS et JS-->
     <link rel="stylesheet" href="<?php bloginfo('template_directory') ?>/custom-css/custom-bootstrap.css">
+    <script src="<?php bloginfo('template_directory') ?>/js/custom-js.js"></script>
     
     <!-- FONTS ET ICONS -->
     <link href="https://fonts.googleapis.com/css?family=Exo:400,600,700" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
 
     <?php wp_head(); ?>
+
   </head>
   
   <body>

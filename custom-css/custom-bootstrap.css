@@ -36,8 +36,18 @@ p{
 }
 
 .text-no-deco{
-       text-decoration: none;
+       display: block;
+       text-decoration: none ;
+       color: transparent;
+       transition: 0.3s;
 }
+
+.text-no-deco:hover, .text-no-deco:active{
+       color: white;
+       text-shadow: 2px 1px black;
+       text-decoration: none;
+
+} 
 
 .title_link{
        font-size : 1.75rem;
@@ -96,7 +106,7 @@ p{
 }
 
 .petite-marge-top{
-       margin-top: 30px;
+       margin-top: 3rem;
 }
 
 
@@ -212,6 +222,10 @@ footer li a{
 footer li a:hover{
        color: #66ed5d;
        text-decoration: underline;
+}
+
+.menu-footer-map-container ul li{
+       margin : 0.9rem 0;
 }
 
 
@@ -408,8 +422,16 @@ main section div .card-shadow{
        font-weight: 400;
        justify-self: center;
        color : white;
+       text-decoration: underline;
 }
 
 .card-modulable{
        padding : 0;
 }
+
+.project-content{
+       font-size: 1.5rem;
+       font-weight: 500;
+       justify-content: center;
+}
+
