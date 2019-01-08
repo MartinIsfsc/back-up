@@ -436,6 +436,10 @@ main section div .card-shadow{
        color: #ffffff;
 }
 
+.page-normal-content p{
+       padding-bottom: 1rem;
+}
+
 @media(min-width:1200px){
        .page-normal-content{
               font-size: 1.5rem;
