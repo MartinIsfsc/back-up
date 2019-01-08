@@ -352,6 +352,10 @@ a .card-image-overlay .card-text p:hover,a .card-image-overlay .card-text p:acti
        color : white ;
 }
 
+.card-no-deco{
+       border: 0;
+} 
+
 
 
 
@@ -437,19 +441,27 @@ main section div .card-shadow{
 }
 
 .page-normal-content p{
-       padding-bottom: 1rem;
+       padding-bottom: 2rem;
 }
 
-@media(min-width:1200px){
+@media(min-width:1440px){
        .page-normal-content{
               font-size: 1.5rem;
        }
+}
+
+.page-normal-content-justify p{
+       padding-bottom: 2rem;
+       text-align: justify;
+       text-justify: inter-word;
 }
 
 .asbl-left-image{
        width: 100%;
        border: 1px solid white;
        border-radius: 1px;
+}
 
+.asbl-image-perso{
 }
 

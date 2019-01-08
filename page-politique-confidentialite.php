@@ -1,6 +1,6 @@
 <?php get_header()?>
 
-    <main role="main" class="container text-center">
+    <main role="main" class="container">
         
         <?php
           $params = array('pagename' => 'politique-confidentialite');
@@ -9,7 +9,7 @@
 	      if ( $the_query->have_posts() ) :
 			      $the_query->the_post(); ?>
 
-        <h1 class="page-title py-5"> 
+        <h1 class="page-title padding-intro text-center"> 
             <?php the_title() ; ?>
         </h1>
         

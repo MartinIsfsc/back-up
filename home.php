@@ -14,7 +14,7 @@
 		    while ( $the_query->have_posts() ) :
 			    $the_query->the_post(); ?>
 
-          <span class="slogan_titre "><?php the_content() ?></span>
+          <div class="slogan_titre "><?php the_content() ?></div>
 
 		    <?php
 		    endwhile;

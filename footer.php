@@ -16,9 +16,9 @@
 		              while ( $the_query->have_posts() ) :
 			              $the_query->the_post(); ?>
 
-                <h4>
-                  <p href="<?php the_title() ?>" class="uppercase font-weight-600"><?php the_title() ?></p>
-                </h4>
+                <div>
+                  <p class="uppercase font-weight-600"><?php the_title() ?></p>
+                  </div>
                 <div >
                     <?php the_content() ?>
                 </div>
@@ -37,7 +37,7 @@
             </div>
             
             <div class="col-md-3 py-5">
-              <h4 class="uppercase font-weight-600">map du site</h4>
+              <div class="uppercase font-weight-600">map du site</div>
 	            <?php
 	            wp_nav_menu(array(
                 'theme_location' => 'bottom-map',
@@ -56,9 +56,9 @@
 		            while ( $the_query->have_posts() ) :
 			            $the_query->the_post(); ?>
 
-              <h4>
-                <p href="<?php the_permalink() ?>" class="font-weight-600 uppercase"><?php the_title() ?></p>
-              </h4>
+              <div>
+                <p class="font-weight-600 uppercase"><?php the_title() ?></p>
+                </div>
               <div>
                   <?php the_content() ?>
                   <a href="https://www.facebook.com/The-Layers-Project-438733686661474/?modal=admin_todo_tour"><i class="fab fa-facebook-square fa-2x"></i></a>
@@ -87,7 +87,7 @@
 		                while ( $the_query->have_posts() ) :
                       $the_query->the_post(); ?>
                   
-                  <span><?php the_content() ?></span>
+                  <div><?php the_content() ?></div>
               
                 <?php
                   endwhile;

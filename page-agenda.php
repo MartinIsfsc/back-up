@@ -6,7 +6,7 @@
       
       <h1 class="page-title text-center padding-intro pb-3"><?php the_title()?></h1>
 
-      <h2 class="page-subtitle text-center py-3"> C'est pour bientôt !</h2>
+      <h2 class="page-subtitle text-center py-5"> C'est pour bientôt !</h2>
 
       <div class="row">
         
@@ -50,9 +50,9 @@
 
 
 
-      <h2 class="page-subtitle text-center py-3 petite-marge-top"> On a encore le temps...</h2>
+      <h2 class="page-subtitle text-center py-5 petite-marge-top"> On a encore le temps...</h2>
 
-      <div class="wide-container mx-sm-2 mx-md-5">
+      <div class="wide-container ">
           <div class="row">
 
 	          <?php
@@ -64,7 +64,7 @@
 			          $the_query->the_post(); ?>
 
             <div class="col-lg card-group">
-              <div class="card card-modulable mb-4 mx-lg-3">
+              <div class="card card-modulable mb-4">
 
 	              <?php
 	              if(get_the_post_thumbnail_url()): ?>
