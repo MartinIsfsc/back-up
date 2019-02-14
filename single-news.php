@@ -8,18 +8,23 @@
               the_post();
        ?>
        
-       <section class="justify-content-center container">
+       <section class="container text-center">
               
-              <h2 class="padding-intro text-center"><?php the_title() ; ?> </h2>
-
-              <div class="d-flex mb-5 row">
-                     
+              <div class="row">
                      <div class="mt-5 col-lg-6 card card-modulable card-shadow">
                             <?php 
                             if(get_the_post_thumbnail_url()): ?>
                                    <img class="img-intro card-image" src="<?php the_post_thumbnail_url() ?>" alt="Image de présentation de l'événement">
                             <?php endif; ?>
                      </div>
+              
+                     <h2 class="padding-intro text-center"><?php the_title() ; ?> </h2>
+
+              </div>
+
+              <div class="d-flex mb-5 row">
+                     
+
                      
                      <div class="justify-content-center col-lg-6 event-content-padding article-presentation">
                             <?php the_content()?> 

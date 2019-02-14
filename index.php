@@ -14,7 +14,7 @@
 		    while ( $the_query->have_posts() ) :
 			    $the_query->the_post(); ?>
 
-          <span class="slogan_titre "><?php the_content() ?></span>
+          <div class="slogan_titre "><?php the_content() ?></div>
 
 		    <?php
 		    endwhile;
@@ -37,7 +37,7 @@
 		      while ( $the_query->have_posts() ) :
 			      $the_query->the_post(); ?>
 
-            <a href="<?php the_permalink() ?>" class="title_link uppercase text-center"><?php the_title() ?></a>
+            <a href="<?php echo get_home_url() ?>/projet" class="title_link uppercase text-center"><?php the_title() ?></a>
             <div class="intro_texte"><?php the_content() ?></div>
 		      <?php
 		      endwhile;
@@ -53,7 +53,7 @@
         
       <div class="functionnal-row pb-3">
         <div class="px-3 py-3 pt-md-4 pb-md-4 mx-auto text-center">
-          <a href="agenda.php" class="title_link uppercase lightened"> agenda</a>
+          <a href="<?php echo get_home_url()?>/category/agenda" class="title_link uppercase lightened"> agenda</a>
         </div>
       </div>
         
@@ -68,19 +68,17 @@
 		          while ( $the_query->have_posts() ) :
 			          $the_query->the_post(); ?>
 
-            <div class="col-md card-group">
-              <div class="card mb-4 mx-lg-3">
+            <div class="col-lg card-group">
+              <div class="card card-anim-shadow card-shadow mb-4 mx-lg-3">
 
 	              <?php
 	              if(get_the_post_thumbnail_url()): ?>
-                  <a href="<?php the_permalink(); ?>">
                     <img class="card-img" src="<?php the_post_thumbnail_url() ?>" alt="Evénément">
-                  </a>
 	              <?php endif; ?>
                 
-                <a href="<?php the_permalink() ; ?>" >
+                <a href="<?php the_permalink() ; ?>"  class="text-no-deco">
                   <div class="card-img-overlay px-4 py4">
-                    <p class="card-title uppercase card-title">
+                    <p class="card-title uppercase">
                       <?php the_title() ; ?>
                     </p>
                     <p class="card-text">
@@ -108,7 +106,7 @@
       
       <div class="functionnal-row pb-3">
         <div class="px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
-          <a href="news.php" class="title_link uppercase">news</a>
+          <a href="<?php echo get_home_url()?>/categories/news" class="title_link uppercase">news</a>
         </div>
       </div>
       
@@ -116,7 +114,7 @@
         <div class="row">
 
 	        <?php
-	        $params = array('category_name' => 'news','posts_per_page' => 4);
+	        $params = array('post-type'=>'news' , 'category_name' => 'news','posts_per_page' => 4);
 	        $the_query = new WP_Query($params);
 
 	        if ( $the_query->have_posts() ) :
@@ -124,12 +122,12 @@
 			        $the_query->the_post(); ?>
 
           <div class="col-lg-3 card-group">
-            <div class="card mb-3">
+            <div class="card card-anim-shadow mb-3">
 
 	            <?php
 	            if(get_the_post_thumbnail_url()): ?>
                 <a href="<?php the_permalink(); ?>">
-                  <img class="card-img-top" src="<?php the_post_thumbnail_url() ?>" alt="Card image ">
+                  <img class="card-img-top" src="<?php the_post_thumbnail_url() ?>" alt="Card card-anim-shadow image ">
                 </a>
 	            <?php endif; ?>
 

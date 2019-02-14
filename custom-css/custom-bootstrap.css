@@ -106,7 +106,7 @@ p{
 }
 
 .petite-marge-top{
-       margin-top: 3rem;
+       margin-top: 2rem;
 }
 
 
@@ -228,6 +228,9 @@ footer li a:hover{
        margin : 0.9rem 0;
 }
 
+.footer-title{
+       font-size: 1.5rem;
+}
 
 
 
@@ -306,12 +309,12 @@ footer li a:hover{
 }
 
 @media (min-width : 768px){
-       .card{
+       .card-anim-shadow{
               transition: 0.5s;
               box-shadow: 16px 8px 16px 10px rgba(0,0,0,0); 
        }
        
-       .card:hover{
+       .card-anim-shadow:hover{
               box-shadow: 10px 8px 16px 0 rgba(0,0,0,0.5);
        }
        
@@ -463,5 +466,6 @@ main section div .card-shadow{
 }
 
 .asbl-image-perso{
+       width: 50%;
 }
 

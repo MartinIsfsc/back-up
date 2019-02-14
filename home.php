@@ -53,7 +53,7 @@
         
       <div class="functionnal-row pb-3">
         <div class="px-3 py-3 pt-md-4 pb-md-4 mx-auto text-center">
-          <a href="<?php echo get_home_url()?>/agenda" class="title_link uppercase lightened"> agenda</a>
+          <a href="<?php echo get_home_url()?>/category/agenda" class="title_link uppercase lightened"> agenda</a>
         </div>
       </div>
         
@@ -69,7 +69,7 @@
 			          $the_query->the_post(); ?>
 
             <div class="col-lg card-group">
-              <div class="card card-shadow mb-4 mx-lg-3">
+              <div class="card card-anim-shadow card-shadow mb-4 mx-lg-3">
 
 	              <?php
 	              if(get_the_post_thumbnail_url()): ?>
@@ -114,7 +114,7 @@
         <div class="row">
 
 	        <?php
-	        $params = array('category_name' => 'news','posts_per_page' => 4);
+	        $params = array('post-type'=>'news' , 'category_name' => 'news','posts_per_page' => 4);
 	        $the_query = new WP_Query($params);
 
 	        if ( $the_query->have_posts() ) :
@@ -122,12 +122,12 @@
 			        $the_query->the_post(); ?>
 
           <div class="col-lg-3 card-group">
-            <div class="card mb-3">
+            <div class="card card-anim-shadow mb-3">
 
 	            <?php
 	            if(get_the_post_thumbnail_url()): ?>
                 <a href="<?php the_permalink(); ?>">
-                  <img class="card-img-top" src="<?php the_post_thumbnail_url() ?>" alt="Card image ">
+                  <img class="card-img-top" src="<?php the_post_thumbnail_url() ?>" alt="Card card-anim-shadow image ">
                 </a>
 	            <?php endif; ?>
 

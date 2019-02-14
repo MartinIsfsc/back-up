@@ -103,14 +103,13 @@
                 $the_query->the_post();
                 
             if(get_the_post_thumbnail_url()):
-
           ?>
               
-          <img src="<?php the_post_thumbnail_url();?>" alt="Martin Delporte" class="card-img rounded-circle col-8 asbl-image-perso mx-auto">
+          <img src="<?php the_post_thumbnail_url();?>" alt="Martin Delporte" class="card-img rounded-circle asbl-image-perso mx-auto asbl-image-perso">
 
           <h4 class="page-subtitle text-center text-dark pt-4"><?php the_title() ?> </h4>
 
-          <div class="card-text">
+          <div class="card-text py-2">
             <?php the_content()?>
           </div>
           
@@ -134,11 +133,11 @@
 
           ?>
               
-          <img src="<?php the_post_thumbnail_url();?>" alt="Josias Van Droogenbroeck" class="card-img rounded-circle col-8 mx-auto asbl-image-perso ">
+          <img src="<?php the_post_thumbnail_url();?>" alt="Josias Van Droogenbroeck" class="card-img rounded-circle mx-auto asbl-image-perso asbl-image-perso">
 
           <h4 class="page-subtitle text-center text-dark pt-4"><?php the_title() ?> </h4>
 
-          <div class="card-text">
+          <div class="card-text py-2">
             <?php the_content()?>
           </div>
           
@@ -153,13 +152,6 @@
       </div>
     </div> 
   </section>
-
-
-
-
-
-  
-
 
 
 </main> 

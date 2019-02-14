@@ -17,7 +17,7 @@
 			              $the_query->the_post(); ?>
 
                 <div>
-                  <p class="uppercase font-weight-600"><?php the_title() ?></p>
+                  <p class="uppercase font-weight-600 footer-title"><?php the_title() ?></p>
                   </div>
                 <div >
                     <?php the_content() ?>
@@ -37,7 +37,7 @@
             </div>
             
             <div class="col-md-3 py-5">
-              <div class="uppercase font-weight-600">map du site</div>
+              <div class="uppercase font-weight-600 footer-title">map du site</div>
 	            <?php
 	            wp_nav_menu(array(
                 'theme_location' => 'bottom-map',
@@ -57,7 +57,7 @@
 			            $the_query->the_post(); ?>
 
               <div>
-                <p class="font-weight-600 uppercase"><?php the_title() ?></p>
+                <p class="font-weight-600 uppercase footer-title"><?php the_title() ?></p>
                 </div>
               <div>
                   <?php the_content() ?>

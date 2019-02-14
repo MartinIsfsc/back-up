@@ -1,29 +1,48 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  
-  <head>
-    <meta charset="utf-8">
-    <title>The Layers Project</title>
-    <link rel="stylesheet" href="/css/master.css">
-    <script src="script.js"> </script>
-    <link href="https://fonts.googleapis.com/css?family=Exo:400,600,700" rel="stylesheet">
-  </head>
-  
-  <body>
+<?php get_header(); ?>
 
-    <header>
+<main role="main" class="wide-container justify-content-center text-white">
+       
+       <?php
+              if( have_posts() ):
+              while( have_posts() ):
+              the_post();
+       ?>
+       
+       <section class="container text-center">
+              
+              <div class="row">
+                     <div class="mt-5 col-lg-6 card card-modulable card-shadow">
+                            <?php 
+                            if(get_the_post_thumbnail_url()): ?>
+                                   <img class="img-intro card-image" src="<?php the_post_thumbnail_url() ?>" alt="Image de présentation de l'événement">
+                            <?php endif; ?>
+                     </div>
+              
+                     <h2 class="padding-intro text-center"><?php the_title() ; ?> </h2>
 
-      <a href="index.html" id="menu_logo"><img src="image/tlp_blanc.png" alt="THE LAYERS PROJECT" id="menu_logo_link"></a>
-      <span id="menu_accueil"> <a href="index.html" class="menu_link">accueil</a> </span>
-      <span id="menu_projet"> <a href="projet.html" class="menu_link"> projet </a></span>
-      <span id="menu_asbl"> <a href="asbl.html" class="menu_link"> asbl</a></span>
-      <span id="menu_agenda"> <a href="agenda.html" class="menu_link"> agenda</a> </span>
-      <span id="menu_news"><a href="news.html" class="menu_link">news</a> </span>
-      <span id="menu_galerie"><a href="galerie.html" class="menu_link">galerie</a> </span>
+              </div>
 
-    </header>
+              <div class="d-flex mb-5 row">
+                     
 
-         
-  </body>
+                     
+                     <div class="justify-content-center col-lg-6 event-content-padding article-presentation">
+                            <?php the_content()?> 
+                     </div>
+                     
+              </div>
+              
+       
+       </section>
 
-</html>
+       
+       
+       
+       <?php
+              endwhile;
+              endif;
+       ?>
+
+</main>
+
+<?php get_footer() ?>
