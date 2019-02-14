@@ -106,7 +106,7 @@
       
       <div class="functionnal-row pb-3">
         <div class="px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
-          <a href="<?php echo get_home_url()?>/news" class="title_link uppercase">news</a>
+          <a href="<?php echo get_home_url()?>/category/news" class="title_link uppercase">news</a>
         </div>
       </div>
       
